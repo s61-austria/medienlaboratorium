@@ -1,0 +1,39 @@
+\chapter{Oplevering A}
+
+Dit hoofdstuk bevat de vragen van de eerste oplevering
+
+\section{Hoe kunnen database architechturen gecategoriseerd worden?}
+
+Databases zijn veelal te onderscheiden op basis van 2 categori\"een. De implementatie van relaties en het gebruik van schema's. Deze vormen de volgende kruistabel. \\
+
+\begin{tabular}{ |l|l|l| }
+	\hline
+	& Schema & Document \\ \hline
+	Relationeel & Relationele databases & Graph Databases \\ \hline
+	Non-relationeel & Time Series database & NoSQL database \\\hline
+\end{tabular}
+
+\subsection{Relaties}
+
+Een belangrijk onderdeel van data-opslag zijn de relaties die de stukken met elkaar hebben. Echter ziter een debat in hoe verre deze relatiesafgedowngen moeten worden. Aan de ene kant staan Relationele en Graph databases. Deze databases gebruiken relaties  als harde paramaters. \cite{graphdbs}
+
+Hier tegenover staan de non-relationele databases zoals MongoDB en Time-series. MongoDB dwingt geen relaties af enkan hier geen garanties aan stellen. Een Time-series database bevat geen concept van relaties en slaat enkel datapunten op.
+
+\subsection{Schema}
+
+Een schema biedt houvast aan voor de database. Hierin worden modellen en tabellen gedefin\"eerd. Relationele en Time-Series databases maken hier veel gebruik van om garanties te geven. Hier tegenover staan de Schemaless databases. Deze databases hebben geen regels voor properties en laten een ontwikkelaar alles invoegen.
+Schemaless leidt tot een snellere ontwikkeling van software en zorgt voor hogere deliverability, terwijl Schemas datagaranties bieden.
+
+\section{Scalability van oplossingen}
+
+Scalen is het toevoegen van extra rekenkracht om sneller data te kunnen verwerken. Deze is op te delen in \textbf{verticaal} en \textbf{horizontaal}.
+
+\subsection{Verticaal}
+
+Verticaal schalen is het toevoegen van meer rekenkracht op een enkele machine doormiddel van meer RAM of een krachtigere CPU. Vanwege het feit dat dit dezelfde machine is zorgt ervoor dat de ontwikkelaar en onderhouder geen rekening hoeven te houden met clustering en replicatie. Aangezien schema databases hier al sneller problemen mee hebben is het slim om verticaal te schalen voor schema databases.
+
+\subsection{Horizontaal}
+
+Horizontaal schalen is het toevoegen van extra machines om rekenkracht te krijgen. Queries worden hierdoor parallel gedraaid en zijn zo sneller klaar. Het grotere nadeel hiervan is dat er een replicatie opgezet moet worden, aangezien de databases anders incorrecte queries uit gaan voeren. 
+
+Replicatie is moeilijk en intensief voor schema-databases aangezien ieder bit gekopi\"eerd moet worden. Schemaless databases hebben hier echter geen problemen mee en maken gebruik van sharding, waarbij iedere database een klein stuk van de complete dataset heeft. Vanwege deze reden is het makkelijker om schemaless databases horizontaal te schalen.

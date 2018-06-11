@@ -1,0 +1,58 @@
+\chapter{Oplevering B}
+
+Deze hoofdstuk bevat de laatste twee deelvragen en geven uiteindelijk een antwoord op de hoofdvraag.
+
+\section{Zijn er bruikbare implementaties van deze databases?}
+
+Met de groei van technologie is er genoeg rekenkracht om de verscheidene concepten uit te voeren. Hierbij zijn de volgende implementaties gebruikt;
+
+\begin{enumerate}
+	\item Nosql: MongoDB - Grootste NoSQL implementatie
+	\item Graph Database: Neo4J - Weidverspreide Graph DB met veel documentatie
+	\item Time Series: OpenTSDB - Heeft een docker image en documentatie.
+\end{enumerate}
+
+\section{Is er een betere aanpak mogelijk in geval van de casus?}
+
+Om antwoord op deze vraag te geven, zijn er 3 casussen gedefini\"eerd en uitgewerkt. Per onderdeel is er een iPython notebook beschikbaar met de resultaten.
+
+\subsection{Casus 1}
+
+Stel dat
+
+\begin{enumerate}
+	\item 1000 auto's
+	\item 5000 tot 10000 locaties per auto
+	\item 500 personen met iederen een random hoeveelheid auto's
+\end{enumerate}
+
+Hoe lang duurt het om voor een enkele auto de locatiegeschiedenis van de eigenaar op te halen?
+
+MongoDB blinkt uit in snelheid, met gemiddeld 0.14 seconden per query. Echter is de query zelf zeer complex en bevat meerdere joins en branches en is conceptueel harder te begrijpen. De Neo4J query is een enkele regel en makkelijker te begrijpen, maar is 0.3 seconden in totaal. 
+
+\subsection{Casus 2}
+
+Stel dat
+
+\begin{enumerate}
+	\item 1000 auto's
+	\item 100 personen
+	\item Iedere gebruiker heeft 20 verschillende auto's gehad
+\end{enumerate}
+
+Haal voor een random voertuig de eigenaarsgeschiedenis op.
+
+MongoDB is alweer een stuk sneller met 0.05 seconden gemiddeld. De query zelf is ook begrijpelijk. Dit tegenover Neo4J, die 0.44 seconden bezig is met de query. De query zelf heeft echter een vergelijkbare complexiteit.
+
+\subsection{Casus 3}
+
+Stel dat
+
+\begin{enumerate}
+	\item 100 auto's
+	\item 10.000 locaties voor deze auto's
+\end{enumerate}
+
+Hoe lang duurt het om deze locaties op te slaan? \\
+
+Neo4J loopt behoorlijk achter met 71 seconden en valt dus buiten de race voor snel data te ingesten. OpenTSDB volgt met 4 seconden en Mongo met 0.27 seconden. Voor het querien en inserten is OpenTSDB echter wel koning, aangezien dit hier met een enkele regel gedaan kan worden.

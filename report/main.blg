@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Arch Linux)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: sources.bib
+Warning--entry type for "zdnet-nosql" isn't style-file defined
+--line 1 of file sources.bib
+Name 1 in "Ian Robinson, Jim Webber, and Emil Eifrem" has a comma at the end for entry graphdbs
+while executing---line 1049 of file plain.bst
+Name 1 in "Ian Robinson, Jim Webber, and Emil Eifrem" has a comma at the end for entry graphdbs
+while executing---line 1090 of file plain.bst
+Warning--empty publisher in graphdbs
+Warning--empty year in graphdbs
+You've used 2 entries,
+            2118 wiz_defined-function locations,
+            505 strings with 4115 characters,
+and the built_in function-call counts, 467 in all, are:
+= -- 36
+> -- 20
+< -- 0
++ -- 8
+- -- 6
+* -- 27
+:= -- 82
+add.period$ -- 4
+call.type$ -- 2
+change.case$ -- 8
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 19
+empty$ -- 45
+format.name$ -- 6
+if$ -- 94
+int.to.chr$ -- 0
+int.to.str$ -- 2
+missing$ -- 2
+newline$ -- 11
+num.names$ -- 4
+pop$ -- 21
+preamble$ -- 1
+purify$ -- 7
+quote$ -- 0
+skip$ -- 14
+stack$ -- 0
+substring$ -- 10
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 6
+warning$ -- 2
+while$ -- 4
+width$ -- 3
+write$ -- 17
+(There were 2 error messages)
